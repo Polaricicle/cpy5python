@@ -7,11 +7,13 @@
 #in standard output
 
 while (True): #creates a loop to repeat calculation without restarting application
-
-    fahrenheit = input("""Please input the temperature in Fahrenheit
-or "quit" to quit the program: """)
-    if (fahrenheit == "quit"): #provides a function to quit application
-        quit()
+    while (True):
+        contorquit = input("Continue? ")
+        if contorquit == "no":
+            quit()
+        elif contorquit == "yes":
+            break
+    fahrenheit = input("Please input the temperature in Fahrenheit: ")
     try: #creates a try and except loop to check for a number
         float(fahrenheit)
     except:
